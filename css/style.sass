@@ -1,0 +1,173 @@
+@import "colors"
+
+@import "https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&subset=cyrillic"
+
+body
+  background-color: $black
+  overflow-x: hidden
+  font-family: 'Roboto Condensed', sans-serif
+a:hover, a:active
+  outline: 0
+
+.flex
+  display: flex
+
+.container
+  max-width: 960px
+  margin: 0 auto
+.main-header
+  background-image: url(../img/bck.png)
+  width: 100%
+  height: 530px
+  background-position: center
+  background-size: cover
+  justify-content: space-between
+.logo
+  width: 250px
+  height: 35px
+  margin: 0 auto
+  background-image: url(../img/logo.png)
+  background-repeat: no-repeat
+  background-size: 100%
+  animation: logo-pulse 2s steps(2) infinite
+.title
+  text-indent: 100%
+  white-space: nowrap
+  overflow: hidden
+  margin: 0 0 30px
+.sub-title
+  width: 280px
+  font-size: 30px
+  color: $white
+  font-weight: bold
+  text-transform: uppercase
+  text-align: center
+  text-shadow: 0px 0px 6px rgba($blue, 0), 0px 1px 6px rgba($blue, 0.2), 0px 2px 6px rgba($blue, 0.3), 0px 3px 6px rgba($blue, 0.5), 0px 4px 6px rgba($blue, 0.7), 0px 5px 6px rgba($blue, 0.8), 0px 6px 6px rgba($blue, 0.9), 0 0 6px rgba($blue, 1)
+  overflow: hidden
+
+.slider
+  height: 100px
+
+.play
+  height: 120px
+  .button
+    display: block
+    padding: 10px
+    position: relative
+    height: 35px
+    width: 210px
+    margin: 0 auto
+    text-decoration: none
+    font-weight: bold
+    font-size: 28px
+    text-transform: uppercase
+    text-align: center
+    border-radius: 5px
+    transform: matrix3d(0.757401, -0.000077, 0, 0.000077, -0.184557, 0.782938, 0, -0.002271, 0, 0, 1, 0, 19.244145, -1, 0, 1)
+    transform-origin: 30px 15px 0
+    line-height: 38px
+    white-space: nowrap
+    &::before,
+    &::after
+      content: ''
+      position: absolute
+      border-radius: 3px
+    &::after
+      left: 0px
+      width: 228px
+      bottom: -1px
+    // &::before
+    //   height: 23px
+    //   border-top: 0
+    //   border-radius: 0 0 3px 3px
+
+  .play-btn
+    color: #303234
+    border-bottom: 8px solid $brown
+    text-shadow: 0px 1px 0px $lightBrown
+    background: $oragne
+    background-image: -moz-linear-gradient( 90deg, $oragne 0%, $yellow 100%)
+    background-image: -webkit-linear-gradient( 90deg, $oragne 0%, $yellow 100%)
+    background-image: -ms-linear-gradient( 90deg, $oragne 0%, $yellow 100%)
+    box-shadow: 0px 7px 0px 0px rgba(131, 98, 36, 0.004),inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4)
+
+
+    &:hover
+      background: $yellow
+      background-image: -moz-linear-gradient( 90deg, $yellow  0%, $yellow 100%)
+      background-image: -webkit-linear-gradient( 90deg, $yellow  0%, $yellow 100%)
+    &::before,
+    &::after
+      border: 1px solid $lightBrown
+      border-bottom: 1px solid $brown
+
+
+
+
+
+@keyframes logo-pulse
+  0%
+    background-position: 0 0px
+  100%
+    background-position: 0 -82px
+
+.avt
+  width: 35%
+  // height: 435px
+  background-size: cover
+  position: relative
+.column
+  height: 435px
+  margin-top: 50px
+  background-size: contain
+  background-repeat: no-repeat
+  &-left
+    background-image: url(../img/avtomaty-left.png)
+    background-position: right
+    &::before
+      content: ''
+      position: absolute
+      background-image: url(../img/big_rob.gif)
+      width: 132px
+      height: 80px
+      top: 163px
+      right: 158px
+      background-size: cover
+    &::after
+      content: ''
+      position: absolute
+      background-image: url(../img/pearl_lag.gif)
+      width: 118px
+      height: 75px
+      top: 163px
+      right: 42px
+      background-size: cover
+  &-right
+    background-image: url(../img/avtomaty-right.png)
+    background-position: left
+    &::before
+      content: ""
+      position: absolute
+      background-image: url(../img/hot_targ.gif)
+      width: 143px
+      height: 80px
+      top: 168px
+      background-size: cover
+      left: 23px
+    &::after
+      content: ""
+      position: absolute
+      background-image: url(../img/aztecs.gif)
+      width: 128px
+      height: 78px
+      top: 175px
+      background-size: cover
+      left: 156px
+  &-center
+    // max-width: 30%
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    align-items: center
+    padding-bottom: 50px
+    box-sizing: border-box

@@ -1,0 +1,185 @@
+@import "https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&subset=cyrillic";
+body {
+  background-color: #000;
+  overflow-x: hidden;
+  font-family: "Roboto Condensed", sans-serif; }
+
+a:hover, a:active {
+  outline: 0; }
+
+.flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.container {
+  max-width: 960px;
+  margin: 0 auto; }
+
+.main-header {
+  background-image: url(../img/bck.png);
+  width: 100%;
+  height: 530px;
+  background-position: center;
+  background-size: cover;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.logo {
+  width: 250px;
+  height: 35px;
+  margin: 0 auto;
+  background-image: url(../img/logo.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  -webkit-animation: logo-pulse 2s steps(2) infinite;
+          animation: logo-pulse 2s steps(2) infinite; }
+
+.title {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0 0 30px; }
+
+.sub-title {
+  width: 280px;
+  font-size: 30px;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 0px 0px 6px rgba(31, 48, 129, 0), 0px 1px 6px rgba(31, 48, 129, 0.2), 0px 2px 6px rgba(31, 48, 129, 0.3), 0px 3px 6px rgba(31, 48, 129, 0.5), 0px 4px 6px rgba(31, 48, 129, 0.7), 0px 5px 6px rgba(31, 48, 129, 0.8), 0px 6px 6px rgba(31, 48, 129, 0.9), 0 0 6px #1f3081;
+  overflow: hidden; }
+
+.slider {
+  height: 100px; }
+
+.play {
+  height: 120px; }
+  .play .button {
+    display: block;
+    padding: 10px;
+    position: relative;
+    height: 35px;
+    width: 210px;
+    margin: 0 auto;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 28px;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 5px;
+    -webkit-transform: matrix3d(0.7574, -0.00008, 0, 0.00008, -0.18456, 0.78294, 0, -0.00227, 0, 0, 1, 0, 19.24415, -1, 0, 1);
+            transform: matrix3d(0.7574, -0.00008, 0, 0.00008, -0.18456, 0.78294, 0, -0.00227, 0, 0, 1, 0, 19.24415, -1, 0, 1);
+    -webkit-transform-origin: 30px 15px 0;
+        -ms-transform-origin: 30px 15px 0;
+            transform-origin: 30px 15px 0;
+    line-height: 38px;
+    white-space: nowrap; }
+    .play .button::before, .play .button::after {
+      content: "";
+      position: absolute;
+      border-radius: 3px; }
+    .play .button::after {
+      left: 0px;
+      width: 228px;
+      bottom: -1px; }
+  .play .play-btn {
+    color: #303234;
+    border-bottom: 8px solid #836224;
+    text-shadow: 0px 1px 0px #f9c87a;
+    background: #f5a322;
+    background-image: -webkit-linear-gradient(90deg, #f5a322 0%, gold 100%);
+    box-shadow: 0px 7px 0px 0px rgba(131, 98, 36, 0.004), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4); }
+    .play .play-btn:hover {
+      background: gold;
+      background-image: -webkit-linear-gradient(90deg, gold 0%, gold 100%); }
+    .play .play-btn::before, .play .play-btn::after {
+      border: 1px solid #f9c87a;
+      border-bottom: 1px solid #836224; }
+
+@-webkit-keyframes logo-pulse {
+  0% {
+    background-position: 0 0px; }
+  100% {
+    background-position: 0 -82px; } }
+
+@keyframes logo-pulse {
+  0% {
+    background-position: 0 0px; }
+  100% {
+    background-position: 0 -82px; } }
+.avt {
+  width: 35%;
+  background-size: cover;
+  position: relative; }
+
+.column {
+  height: 435px;
+  margin-top: 50px;
+  background-size: contain;
+  background-repeat: no-repeat; }
+  .column-left {
+    background-image: url(../img/avtomaty-left.png);
+    background-position: right; }
+    .column-left::before {
+      content: "";
+      position: absolute;
+      background-image: url(../img/big_rob.gif);
+      width: 132px;
+      height: 80px;
+      top: 163px;
+      right: 158px;
+      background-size: cover; }
+    .column-left::after {
+      content: "";
+      position: absolute;
+      background-image: url(../img/pearl_lag.gif);
+      width: 118px;
+      height: 75px;
+      top: 163px;
+      right: 42px;
+      background-size: cover; }
+  .column-right {
+    background-image: url(../img/avtomaty-right.png);
+    background-position: left; }
+    .column-right::before {
+      content: "";
+      position: absolute;
+      background-image: url(../img/hot_targ.gif);
+      width: 143px;
+      height: 80px;
+      top: 168px;
+      background-size: cover;
+      left: 23px; }
+    .column-right::after {
+      content: "";
+      position: absolute;
+      background-image: url(../img/aztecs.gif);
+      width: 128px;
+      height: 78px;
+      top: 175px;
+      background-size: cover;
+      left: 156px; }
+  .column-center {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 50px;
+    box-sizing: border-box; }
