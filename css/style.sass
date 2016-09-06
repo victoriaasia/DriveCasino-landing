@@ -377,3 +377,33 @@ a:hover, a:active
       &::after
         filter: brightness(150%)
         bottom: -58px
+
+
+#return-to-top
+  position: fixed
+  bottom: 20px
+  right: 20px
+  background: rgba($gray, 0.2)
+  color: $gray
+  text-transform: uppercase
+  font-size: 12px
+  text-align: center
+  width: 65px
+  height: auto
+  display: block
+  text-decoration: none
+  padding: 15px 0
+  display: none
+  transition: all 0.3s ease
+  &::before
+    content: ''
+    position: absolute
+    left: 0px
+    top: -53px
+    border: 33px solid transparent
+    border-bottom: 20px solid rgba($gray, 0.2)
+    transition: all 0.3s ease
+  &:hover
+    background: rgba($gray, 0.1)
+    &::before
+      border-bottom-color: rgba($gray, 0.1)

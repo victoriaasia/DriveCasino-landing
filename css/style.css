@@ -714,3 +714,34 @@ a:hover, a:active {
         -webkit-filter: brightness(150%);
                 filter: brightness(150%);
         bottom: -58px; }
+
+#return-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(142, 152, 162, 0.2);
+  color: #8e98a2;
+  text-transform: uppercase;
+  font-size: 12px;
+  text-align: center;
+  width: 65px;
+  height: auto;
+  display: block;
+  text-decoration: none;
+  padding: 15px 0;
+  display: none;
+  -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease; }
+  #return-to-top::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: -53px;
+    border: 33px solid transparent;
+    border-bottom: 20px solid rgba(142, 152, 162, 0.2);
+    -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease; }
+  #return-to-top:hover {
+    background: rgba(142, 152, 162, 0.1); }
+    #return-to-top:hover::before {
+      border-bottom-color: rgba(142, 152, 162, 0.1); }
