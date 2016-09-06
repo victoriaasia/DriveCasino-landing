@@ -31,7 +31,7 @@ a:hover, a:active
   -o-text-overflow: clip
   text-overflow: clip
   white-space: pre
-  text-shadow: 0 0 5px rgba($white,0.3) , 0 0 8px rgba($blue,0.6) , 0 0 10px rgba($white,0.8) , 0 0 20px $blue , 0 0 30px $blue , 0 0 50px $blue , 0 0 60px $blue
+  text-shadow: 0 0 5px rgba($white,0.3), 0 0 8px rgba($navy,0.6), 0 0 10px rgba($white,0.8), 0 0 20px $navy, 0 0 30px $navy, 0 0 50px $navy, 0 0 60px $navy
 
 .container
   max-width: 960px
@@ -210,7 +210,7 @@ a:hover, a:active
           text-align: center
           text-transform: uppercase
           position: absolute
-          p
+
           font-size: 18px
           color: $white
           line-height: 25px
@@ -233,7 +233,7 @@ a:hover, a:active
   justify-content: space-around
   flex-wrap: wrap
   .game
-    min-width: 120px
+    max-width: 130px
     flex: 1 1 120px
     border: 1px solid $white
     background-image: -moz-linear-gradient( 90deg, $darkGray 0%, $lightGray 40%, $lightGray 60%, $darkGray 100%)
@@ -242,22 +242,62 @@ a:hover, a:active
     padding: 10px 10px 0px
     margin: 15px 10px
     text-align: center
-    a
+    .game-preview
       display: block
+      height: 65px
       text-decoration: none
       overflow: hidden
-    .game-preview
-      width: 100%
       border: 1px solid $gray
-      transform: scale3d(1, 1, 1)
       box-shadow: 2px 3px 5px -1px rgba($black,0.7)
       box-sizing: border-box
-      transition: all 0.5s linear
-      &:hover
+      position: relative
+      img
+        max-width: 100%
+        transform: scale3d(1, 1, 1)
+        transition: all 0.3s linear
+      &:hover img
         transform: scale3d(1.2, 1.2, 1)
-
-    h6
+      &:hover .game-play
+        visibility: visible
+        transition-delay: 0s
+        .game-play-btn
+          top: 13px
+      .game-play
+        background: -moz-radial-gradient(center, ellipse cover, rgbargba($black,0.1) 0%, rgba($black,0.9) 100%)
+        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba($black,0.1)), color-stop(100%, rgba($black,0.9)))
+        background: -webkit-radial-gradient(center, ellipse cover, rgba($black,0.1) 0%, rgba($black,0.9) 100%)
+        background: -o-radial-gradient(center, ellipse cover, rgba($black,0.1) 0%, rgba($black,0.9) 100%)
+        background: -ms-radial-gradient(center, ellipse cover, rgba($black,0.1) 0%, rgba($black,0.9) 100%)
+        background: radial-gradient(ellipse at center, rgba($black,0.1) 0%, rgba($black,0.95) 100%)
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$black', endColorstr='$black',GradientType=1 )
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        visibility: hidden
+        transition: visibility 0s linear 0.3s
+        .game-play-btn
+          width: auto
+          height: 25px
+          border-radius: 5px
+          background-image: -moz-linear-gradient( 90deg, $blue 0%, $aqua 100%)
+          background-image: -webkit-linear-gradient( 90deg, $blue 0%, $aqua 100%)
+          background-image: -ms-linear-gradient( 90deg, $blue 0%, $aqua 100%)
+          box-shadow: 0px 2px 1px 0px rgba($darkGray, 0.004),inset 0px 1px 0px 0px rgba($white, 0.4)
+          padding: 5px 10px
+          font-size: 24px
+          color: $white
+          font-weight: bold
+          text-align: center
+          text-shadow: 0.5px 0.866px 1px rgba($black, 0.5)
+          position: absolute
+          left: 22px
+          top: -35px
+          transition: all 0.3s linear
+    .game-title
       font-size: 18px
       color: $white
       text-shadow: 2px 1px 2px rgba($black,0.7)
       padding: 10px 0
+      cursor: default
