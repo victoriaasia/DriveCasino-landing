@@ -1,4 +1,4 @@
-@import "https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&subset=cyrillic";
+@import "https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700,700i&subset=cyrillic";
 @-webkit-keyframes fly {
   50% {
     margin-top: -7px; } }
@@ -311,7 +311,8 @@ a:hover, a:active {
   clear: both; }
 
 .sub-title {
-  max-width: 250px;
+  max-width: 310px;
+  margin: 0 auto;
   font-size: 30px;
   color: #fff;
   font-weight: bold;
@@ -601,3 +602,39 @@ a:hover, a:active {
       text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.7);
       padding: 10px 0;
       cursor: default; }
+
+.comments {
+  position: relative;
+  top: -30px;
+  padding: 0 17vw; }
+  .comments::before, .comments::after {
+    content: "";
+    width: 960px;
+    height: 15px;
+    background-image: url(../img/br.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    max-width: 100%; }
+  .comments::before {
+    top: -30px; }
+  .comments::after {
+    bottom: -40px; }
+  .comments .comment {
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 20px 0; }
+    .comments .comment-content {
+      color: #fff;
+      padding: 3px 0; }
+    .comments .comment-name {
+      color: #a4b0ff;
+      text-align: right;
+      padding: 3px 0; }
+
+.benefits {
+  margin-top: 30px; }
