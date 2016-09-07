@@ -1,13 +1,14 @@
-// ===== Scroll to Top ====
+// Scroll to Top
+
 $(window).scroll(function() {
-    if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
-        $('#return-to-top').fadeIn(200);    // Fade in the arrow
+    if ($(this).scrollTop() >= 50) {
+        $('#to-top').fadeIn(200);
     } else {
-        $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+        $('#to-top').fadeOut(200);
     }
 });
-$('#return-to-top').click(function() {      // When arrow is clicked
+$('#to-top').click(function() {
     $('body,html').animate({
-        scrollTop : 0                       // Scroll to top of body
+        scrollTop : 0
     }, 500);
 });
