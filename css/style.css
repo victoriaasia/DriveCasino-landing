@@ -319,11 +319,6 @@ a:hover, a:active {
   display: -ms-flexbox;
   display: flex; }
 
-.clearfix {
-  content: "";
-  display: table;
-  clear: both; }
-
 .sub-title {
   max-width: 310px;
   margin: 0 auto;
@@ -415,47 +410,43 @@ a:hover, a:active {
       background-position: right;
       padding-top: 35px;
       box-sizing: content-box; }
-      .main-header .column-left::before {
+      .main-header .column-left::before, .main-header .column-left::after {
         content: "";
         position: absolute;
+        background-size: 100% 100%; }
+      .main-header .column-left::before {
         background-image: url(../img/big_rob.gif);
         width: 132px;
-        height: 80px;
-        top: 149px;
-        right: 157px;
-        background-size: cover; }
+        height: 74px;
+        top: 156px;
+        right: 157px; }
       .main-header .column-left::after {
-        content: "";
-        position: absolute;
         background-image: url(../img/pearl_lag.gif);
         width: 120px;
         height: 70px;
-        top: 147px;
-        right: 37px;
-        background-size: cover; }
+        top: 160px;
+        right: 37px; }
     .main-header .column-right {
       background-image: url(../img/avtomaty-right.png);
       background-position: left;
       padding-top: 35px;
       box-sizing: content-box; }
-      .main-header .column-right::before {
+      .main-header .column-right::before, .main-header .column-right::after {
         content: "";
         position: absolute;
+        background-size: 100% 100%; }
+      .main-header .column-right::before {
         background-image: url(../img/hot_targ.gif);
         width: 133px;
         height: 80px;
         top: 156px;
-        left: 22px;
-        background-size: cover; }
+        left: 22px; }
       .main-header .column-right::after {
-        content: "";
-        position: absolute;
         background-image: url(../img/aztecs.gif);
         width: 136px;
         height: 80px;
-        top: 156px;
-        left: 148px;
-        background-size: cover; }
+        top: 165px;
+        left: 155px; }
     .main-header .column-center {
       padding-bottom: 50px;
       box-sizing: border-box; }
@@ -543,9 +534,10 @@ a:hover, a:active {
   padding: 0 10vw;
   position: relative;
   top: -90px;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
@@ -660,9 +652,10 @@ a:hover, a:active {
   margin-top: 30px;
   padding: 0 10vw; }
   .benefits-content {
-    -webkit-justify-content: space-around;
-        -ms-flex-pack: distribute;
-            justify-content: space-around;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
@@ -673,7 +666,7 @@ a:hover, a:active {
     -webkit-flex: 1 1 110px;
         -ms-flex: 1 1 110px;
             flex: 1 1 110px;
-    margin: 10px; }
+    margin: 15px; }
     .benefits .benefit-title {
       width: 90px;
       margin: 5px auto;
@@ -718,6 +711,10 @@ a:hover, a:active {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 70px 50px 20px; }
   .partners .partner {
     width: 60px;

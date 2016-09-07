@@ -6,17 +6,11 @@ body
   background-color: $black
   overflow-x: hidden
   font-family: 'Roboto Condensed', sans-serif
+
 a:hover, a:active
   outline: 0
-
 .flex
   display: flex
-
-.clearfix
-  content: ''
-  display: table
-  clear: both
-
 .sub-title
   max-width: 310px
   margin: 0 auto
@@ -105,47 +99,45 @@ a:hover, a:active
       background-position: right
       padding-top: 35px
       box-sizing: content-box
-      &::before
-        content: ''
-        position: absolute
-        background-image: url(../img/big_rob.gif)
-        width: 132px
-        height: 80px
-        top: 149px
-        right: 157px
-        background-size: cover
+      &::before,
       &::after
         content: ''
         position: absolute
+        background-size: 100% 100%
+      &::before
+        background-image: url(../img/big_rob.gif)
+        width: 132px
+        height: 74px
+        top: 156px
+        right: 157px
+      &::after
         background-image: url(../img/pearl_lag.gif)
         width: 120px
         height: 70px
-        top: 147px
+        top: 160px
         right: 37px
-        background-size: cover
     &-right
       background-image: url(../img/avtomaty-right.png)
       background-position: left
       padding-top: 35px
       box-sizing: content-box
-      &::before
+      &::before,
+      &::after
         content: ''
         position: absolute
+        background-size: 100% 100%
+      &::before
         background-image: url(../img/hot_targ.gif)
         width: 133px
         height: 80px
         top: 156px
         left: 22px
-        background-size: cover
       &::after
-        content: ''
-        position: absolute
         background-image: url(../img/aztecs.gif)
         width: 136px
         height: 80px
-        top: 156px
-        left: 148px
-        background-size: cover
+        top: 165px
+        left: 155px
     &-center
       padding-bottom: 50px
       box-sizing: border-box
@@ -218,12 +210,11 @@ a:hover, a:active
           &.fifthanimation
             animation: cyclefive 20s linear infinite
 
-
 .games
   padding: 0 10vw
   position: relative
   top: -90px
-  justify-content: space-around
+  justify-content: center
   flex-wrap: wrap
   .game
     max-width: 130px
@@ -330,18 +321,17 @@ a:hover, a:active
       text-align: right
       padding: 3px 0
 
-
 .benefits
   margin-top: 30px
   padding: 0 10vw
   &-content
-    justify-content: space-around
+    justify-content: center
     flex-wrap: wrap
     padding: 30px 0
   .benefit
     max-width: 100px
     flex: 1 1 110px
-    margin: 10px
+    margin: 15px
     &-title
       width: 90px
       margin: 5px auto
@@ -378,9 +368,9 @@ a:hover, a:active
       left: 0
       transition: 0.5s linear
 
-
 .partners
   flex-wrap: wrap
+  justify-content: center
   margin: 70px 50px 20px
   .partner
     width: 60px
@@ -392,9 +382,6 @@ a:hover, a:active
     align-items: center
     img
       max-width: 100%
-
-
-
 
 #to-top
   position: fixed
