@@ -704,8 +704,8 @@ a:hover, a:active {
     height: 35px;
     bottom: -40px;
     left: 0;
-    -webkit-transition: 0.5s linear;
-            transition: 0.5s linear; }
+    -webkit-transition: 0.3s linear;
+            transition: 0.3s linear; }
 
 .partners {
   -webkit-flex-wrap: wrap;
